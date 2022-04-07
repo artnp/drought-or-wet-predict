@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Srisakdi&display=swap');
+        body{
+            font-family: 'Srisakdi', cursive;
+            font-size:x-large
+        }
+        </style>
+    
+    <title>ดูน้ำจะมากหรือน้อย</title>
+</head>
+<body>
+    <center>
+    <h1>ดูน้ำจะมากหรือน้อย</h1>
+    {{<b>เดือน ๖ ขึ้น ค่ำ ๑ เปน วัน อะไร ให้ จำ ไว้</b>}}
+   <h3> <a href="#" 
+    target="popup" 
+    onclick="window.open('https://www.myhora.com/%e0%b8%9b%e0%b8%8f%e0%b8%b4%e0%b8%97%e0%b8%b4%e0%b8%99/%e0%b8%9b%e0%b8%8f%e0%b8%b4%e0%b8%97%e0%b8%b4%e0%b8%99-%e0%b8%a1%e0%b8%b4%e0%b8%96%e0%b8%b8%e0%b8%99%e0%b8%b2%e0%b8%a2%e0%b8%99-%e0%b8%9e.%e0%b8%a8.'+ year + '.aspx','popup','width=1600,height=1600'); return false;">
+     [ คลิกเพื่อดูปฏิทินจันทคติ ]
+  </a></h2>
+  <br>
+       วัน: <select id="day" class="day" style="font-size:30px;width:160px;height:40px">
+            <option value="1">วัน อาทิตย์</option>
+            <option value="2">วัน จันทร์</option>
+            <option value="3">วัน อังคาร</option>
+            <option value="4">วัน พุฒ</option>
+            <option value="5">วัน พฤหัศบดิ์</option>
+            <option value="6">วัน สุกร์</option>
+            <option value="7">วัน เสาร์</option>
+          </select> 
+        
+
+      => <button class="cal" onsubmit="cal()" style="font-size:24px">ทำนาย</button>
+      <br><br>
+      <hr>
+      <div id='img'></div><br><br>
+   <b><div id='text'></div></b>
+
+     
+    </center>
+    <script>
+year = (new Date().getFullYear()) + 543
+
+
+
+function cal() {
+day = document.getElementById("day").value
+
+if (day === '1'){
+document.getElementById('img').innerHTML = '<img src=\'1.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๑</font> อยู่ เท้าโค ปี นั้น น้ำ น้อย นัก'
+} else if (day === '2'){
+document.getElementById('img').innerHTML = '<img src=\'2.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๒</font> อยู่ เสมอ เข่าโค น้ำ น้อย'
+} else if (day === '3'){
+document.getElementById('img').innerHTML = '<img src=\'3.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๓</font>  อยู่ เสมอ ท้องโค พอ ทำนาได้'
+} else if (day === '4'){
+document.getElementById('img').innerHTML = '<img src=\'4.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๔</font> อยู่ เสมอ สี ค่าง โค น้ำ งาม'
+} else if (day === '5'){
+document.getElementById('img').innerHTML = '<img src=\'5.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๕</font> อยู่ เสมอ คางโค น้ำ มาก'
+} else if (day === '6'){
+document.getElementById('img').innerHTML = '<img src=\'6.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๖</font> อยู่ เสมอ หลังโค น้ำ มาก นัก'
+} else if (day === '7'){
+document.getElementById('img').innerHTML = '<img src=\'7.jpg\' width=\'20%\'>'
+document.getElementById('text').innerHTML = '<font color=\'red\'>๗</font> อยู่ เสมอ เขาโค น้ำ มาก เกิน ไป ท่วม ทุก แห่ง แล'
+}
+
+
+
+}
+document.querySelector('.cal').addEventListener("click", ()=>cal())
+
+</script>
+</body>
+</html>
